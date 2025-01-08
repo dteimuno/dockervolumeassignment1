@@ -12,3 +12,6 @@ docker container stop psql1
 #Create new postgres container with same named volume using 9.6.2
 docker container run -d --name psql2 -e POSTGRES_PASSWORD=mypassword -v $(pwd):/var/lib/postgresql/data postgres:9.6.2
 docker container logs psql2
+
+#Stop container 
+docker container stop psql2
